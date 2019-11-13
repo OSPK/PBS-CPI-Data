@@ -30,7 +30,7 @@ for datafile in tqdm(files):
     dates = df["Date"].to_list()
     dates_str = [val.strftime("%b/%Y") for val in dates]
     line_chart = pygal.Line()
-    line_chart.interpolate = 'cubic'
+    # line_chart.interpolate = 'cubic'
     # line_chart.show_dots = False
     line_chart.show_legend=False
     custom_style = Style(

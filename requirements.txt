@@ -33,7 +33,7 @@ requests==2.22.0
 six==1.13.0
 snaptime==0.2.4
 sortedcontainers==2.1.0
-SQLAlchemy==0.7.10
+SQLAlchemy>=1.3.0
 sqlalchemy-migrate==0.13.0
 sqlparse==0.3.0
 Tempita==0.5.2
