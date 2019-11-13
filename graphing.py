@@ -11,7 +11,7 @@ path = os.path.dirname(os.path.abspath(__file__))
 done_path = os.path.join(path, "final")
 svgs = os.path.join(path, "svgs")
 # data = os.path.join(done_path, "lawn.xlsx")
-cities_to_graph = ["Average"]
+cities_to_graph = ["Karachi", "Lahore", "Islamabad", "Peshawar", "Quetta", "Average"]
 files = []
 # r=root, d=directories, f = files
 for r, d, f in os.walk(done_path):
@@ -32,7 +32,7 @@ for datafile in tqdm(files):
     line_chart = pygal.Line()
     # line_chart.interpolate = 'cubic'
     # line_chart.show_dots = False
-    line_chart.show_legend=False
+    # line_chart.show_legend=False
     custom_style = Style(
         font_family= "googlefont:Raleway",
         label_font_family= "googlefont:Raleway",
@@ -50,6 +50,6 @@ for datafile in tqdm(files):
     line_chart.x_labels = dates_str 
     for col in header:
         if col in cities_to_graph:
-            line_chart.add("Avg Price", df[col].to_list())
+            line_chart.add(col, df[col].to_list())
 
     line_chart.render_to_file(os.path.join(svgs, filename+".svg"))
