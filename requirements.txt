@@ -39,7 +39,7 @@ sqlparse==0.3.0
 Tempita==0.5.2
 tqdm==4.38.0
 tzlocal==2.0.0
-urllib3==1.25.7
+urllib3==1.25.8
 xlrd==1.2.0
 xlwt==0.7.2
 camelot-py[cv]
